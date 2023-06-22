@@ -5,7 +5,7 @@ import 'package:authsystem/views/home/account_page.dart';
 import 'package:authsystem/views/home/cart_item_screen.dart';
 import 'package:authsystem/views/home/home_screen.dart';
 import 'package:authsystem/views/home/setting_page.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 
 class BottomNavigationBarPage extends StatefulWidget {
@@ -79,9 +79,9 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
                     ? const Icon(Icons.shopping_cart_outlined)
                     : Stack(
                         children: [
-                          Badge(
-                            badgeColor: Colors.redAccent,
-                            badgeContent:
+                          badges.Badge(
+                            // badgeColor: Colors.redAccent,
+                           badgeContent:
                                 Text("${AllInController.userItems1.length}"),
                             child: const Icon(Icons.shopping_cart_outlined),
                           ),
